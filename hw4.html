@@ -14748,46 +14748,6 @@ if (outputEl) {{
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[195]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">get_html</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-195-7ca552461928&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>fig<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_html<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;Figure&#39; object has no attribute &#39;get_html&#39;</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14831,7 +14791,7 @@ if (outputEl) {{
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[193]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[341]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">sq3</span>
@@ -14858,7 +14818,7 @@ if (outputEl) {{
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[193]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[341]:</div>
 
 
 
@@ -14876,10 +14836,12 @@ if (outputEl) {{
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[192]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[342]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">population</span><span class="o">.</span><span class="n">head</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">population</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">population</span><span class="p">)</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">population</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14895,54 +14857,1101 @@ if (outputEl) {{
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[192]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[342]:</div>
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;bound method NDFrame.head of                BUYER_COUNTY BUYER_STATE countyfips STATE COUNTY  \
-0          1        AUTAUGA          AL      01001     1      1   
-1          2        BALDWIN          AL      01003     1      3   
-2          3        BARBOUR          AL      01005     1      5   
-3          4           BIBB          AL      01007     1      7   
-4          5         BLOUNT          AL      01009     1      9   
-...      ...            ...         ...        ...   ...    ...   
-28260  28261       WASHAKIE          WY      56043    56     43   
-28261  28262         WESTON          WY      56045    56     45   
-28262  28263        SKAGWAY          AK      02230     2    230   
-28263  28264  HOONAH ANGOON          AK      02105     2    105   
-28264  28265     PETERSBURG          AK      02195     2    195   
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-         county_name                               NAME    variable  year  \
-0            Autauga            Autauga County, Alabama  B01003_001  2006   
-1            Baldwin            Baldwin County, Alabama  B01003_001  2006   
-2            Barbour            Barbour County, Alabama  B01003_001  2006   
-3               Bibb               Bibb County, Alabama  B01003_001  2006   
-4             Blount             Blount County, Alabama  B01003_001  2006   
-...              ...                                ...         ...   ...   
-28260       Washakie           Washakie County, Wyoming  B01003_001  2014   
-28261         Weston             Weston County, Wyoming  B01003_001  2014   
-28262        Skagway       Skagway Municipality, Alaska  B01003_001  2014   
-28263  Hoonah Angoon  Hoonah-Angoon Census Area, Alaska  B01003_001  2014   
-28264     Petersburg         Petersburg Borough, Alaska  B01003_001  2014   
-
-      population  
-0          51328  
-1         168121  
-2          27861  
-3          22099  
-4          55485  
-...          ...  
-28260       8444  
-28261       7135  
-28262        996  
-28263       2126  
-28264       3212  
-
-[28265 rows x 11 columns]&gt;</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BUYER_COUNTY</th>
+      <th>BUYER_STATE</th>
+      <th>countyfips</th>
+      <th>STATE</th>
+      <th>COUNTY</th>
+      <th>county_name</th>
+      <th>NAME</th>
+      <th>variable</th>
+      <th>year</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AUTAUGA</td>
+      <td>AL</td>
+      <td>01001</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Autauga</td>
+      <td>Autauga County, Alabama</td>
+      <td>B01003_001</td>
+      <td>2006</td>
+      <td>51328</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BALDWIN</td>
+      <td>AL</td>
+      <td>01003</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Baldwin</td>
+      <td>Baldwin County, Alabama</td>
+      <td>B01003_001</td>
+      <td>2006</td>
+      <td>168121</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BARBOUR</td>
+      <td>AL</td>
+      <td>01005</td>
+      <td>1</td>
+      <td>5</td>
+      <td>Barbour</td>
+      <td>Barbour County, Alabama</td>
+      <td>B01003_001</td>
+      <td>2006</td>
+      <td>27861</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BIBB</td>
+      <td>AL</td>
+      <td>01007</td>
+      <td>1</td>
+      <td>7</td>
+      <td>Bibb</td>
+      <td>Bibb County, Alabama</td>
+      <td>B01003_001</td>
+      <td>2006</td>
+      <td>22099</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BLOUNT</td>
+      <td>AL</td>
+      <td>01009</td>
+      <td>1</td>
+      <td>9</td>
+      <td>Blount</td>
+      <td>Blount County, Alabama</td>
+      <td>B01003_001</td>
+      <td>2006</td>
+      <td>55485</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[343]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">annual</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">annual</span><span class="p">)</span>
+<span class="n">annual</span> <span class="o">=</span> <span class="n">annual</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">annual</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[343]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BUYER_COUNTY</th>
+      <th>BUYER_STATE</th>
+      <th>year</th>
+      <th>count</th>
+      <th>DOSAGE_UNIT</th>
+      <th>countyfips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ABBEVILLE</td>
+      <td>SC</td>
+      <td>2006</td>
+      <td>877</td>
+      <td>363620</td>
+      <td>45001</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ABBEVILLE</td>
+      <td>SC</td>
+      <td>2007</td>
+      <td>908</td>
+      <td>402940</td>
+      <td>45001</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABBEVILLE</td>
+      <td>SC</td>
+      <td>2008</td>
+      <td>871</td>
+      <td>424590</td>
+      <td>45001</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABBEVILLE</td>
+      <td>SC</td>
+      <td>2009</td>
+      <td>930</td>
+      <td>467230</td>
+      <td>45001</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ABBEVILLE</td>
+      <td>SC</td>
+      <td>2010</td>
+      <td>1197</td>
+      <td>539280</td>
+      <td>45001</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[344]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">land</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">land</span><span class="p">)</span>
+<span class="n">land</span> <span class="o">=</span> <span class="n">land</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">land</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[344]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Areaname</th>
+      <th>STCOU</th>
+      <th>LND010190F</th>
+      <th>LND010190D</th>
+      <th>LND010190N1</th>
+      <th>LND010190N2</th>
+      <th>LND010200F</th>
+      <th>LND010200D</th>
+      <th>LND010200N1</th>
+      <th>LND010200N2</th>
+      <th>...</th>
+      <th>LND110210N1</th>
+      <th>LND110210N2</th>
+      <th>LND210190F</th>
+      <th>LND210190D</th>
+      <th>LND210190N1</th>
+      <th>LND210190N2</th>
+      <th>LND210200F</th>
+      <th>LND210200D</th>
+      <th>LND210200N1</th>
+      <th>LND210200N2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>UNITED STATES</td>
+      <td>00000</td>
+      <td>0</td>
+      <td>3787425.08</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>3794083.06</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>...</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>251083.35</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>256644.62</td>
+      <td>0000</td>
+      <td>0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALABAMA</td>
+      <td>01000</td>
+      <td>0</td>
+      <td>52422.94</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>52419.02</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>...</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>1672.71</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>1675.01</td>
+      <td>0000</td>
+      <td>0000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Autauga, AL</td>
+      <td>01001</td>
+      <td>0</td>
+      <td>604.49</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>604.45</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>...</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>8.48</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>8.48</td>
+      <td>0000</td>
+      <td>0000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Baldwin, AL</td>
+      <td>01003</td>
+      <td>0</td>
+      <td>2027.08</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>2026.93</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>...</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>430.55</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>430.58</td>
+      <td>0000</td>
+      <td>0000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Barbour, AL</td>
+      <td>01005</td>
+      <td>0</td>
+      <td>904.59</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>904.52</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>...</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>19.59</td>
+      <td>0000</td>
+      <td>0000</td>
+      <td>0</td>
+      <td>19.61</td>
+      <td>0000</td>
+      <td>0000</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 34 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[345]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Inspect missingness of the annual dataset</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="n">annual</span><span class="o">==</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(760, 6)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[345]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BUYER_COUNTY</th>
+      <th>BUYER_STATE</th>
+      <th>year</th>
+      <th>count</th>
+      <th>DOSAGE_UNIT</th>
+      <th>countyfips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>187</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2006</td>
+      <td>147</td>
+      <td>102800</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2007</td>
+      <td>153</td>
+      <td>104800</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2008</td>
+      <td>153</td>
+      <td>45400</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2009</td>
+      <td>184</td>
+      <td>54200</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2010</td>
+      <td>190</td>
+      <td>56200</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2011</td>
+      <td>186</td>
+      <td>65530</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2012</td>
+      <td>138</td>
+      <td>57330</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2013</td>
+      <td>138</td>
+      <td>65820</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>ADJUNTAS</td>
+      <td>PR</td>
+      <td>2014</td>
+      <td>90</td>
+      <td>59490</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>AGUADA</td>
+      <td>PR</td>
+      <td>2006</td>
+      <td>160</td>
+      <td>49200</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[346]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Inspect missingness of the annual dataset: buter country NOT PR (Puerto Rico)</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="p">((</span><span class="n">annual</span><span class="o">==</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">(</span><span class="n">annual</span><span class="o">.</span><span class="n">BUYER_STATE</span><span class="o">==</span><span class="s2">&quot;PR&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(74, 6)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[346]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BUYER_COUNTY</th>
+      <th>BUYER_STATE</th>
+      <th>year</th>
+      <th>count</th>
+      <th>DOSAGE_UNIT</th>
+      <th>countyfips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10071</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2006</td>
+      <td>319</td>
+      <td>265348</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10072</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2007</td>
+      <td>330</td>
+      <td>275600</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10073</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2008</td>
+      <td>313</td>
+      <td>286900</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10074</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2009</td>
+      <td>390</td>
+      <td>355300</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10075</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2010</td>
+      <td>510</td>
+      <td>413800</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10076</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2011</td>
+      <td>559</td>
+      <td>475600</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10077</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2012</td>
+      <td>616</td>
+      <td>564800</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10078</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2013</td>
+      <td>728</td>
+      <td>623200</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>10079</th>
+      <td>GUAM</td>
+      <td>GU</td>
+      <td>2014</td>
+      <td>712</td>
+      <td>558960</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <th>17429</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2006</td>
+      <td>469</td>
+      <td>175390</td>
+      <td>NA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[347]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Set the countyfips of &quot;AR&quot; state and &quot;MONTGOMERY&quot; buyer county to 5097</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="p">((</span><span class="n">annual</span><span class="o">.</span><span class="n">BUYER_STATE</span> <span class="o">==</span> <span class="s2">&quot;AR&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">annual</span><span class="o">.</span><span class="n">BUYER_COUNTY</span> <span class="o">==</span> <span class="s2">&quot;MONTGOMERY&quot;</span><span class="p">))</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+<span class="n">annual</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">ind</span><span class="p">,</span><span class="s2">&quot;countyfips&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">5097</span><span class="p">)</span>
+<span class="n">annual</span><span class="p">[</span><span class="n">condition</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[347]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BUYER_COUNTY</th>
+      <th>BUYER_STATE</th>
+      <th>year</th>
+      <th>count</th>
+      <th>DOSAGE_UNIT</th>
+      <th>countyfips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17429</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2006</td>
+      <td>469</td>
+      <td>175390</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17430</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2007</td>
+      <td>597</td>
+      <td>241270</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17431</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2008</td>
+      <td>561</td>
+      <td>251760</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17432</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2009</td>
+      <td>554</td>
+      <td>244160</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17433</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2010</td>
+      <td>449</td>
+      <td>247990</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17434</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2011</td>
+      <td>560</td>
+      <td>313800</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17435</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2012</td>
+      <td>696</td>
+      <td>339520</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17436</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2013</td>
+      <td>703</td>
+      <td>382300</td>
+      <td>5097</td>
+    </tr>
+    <tr>
+      <th>17437</th>
+      <td>MONTGOMERY</td>
+      <td>AR</td>
+      <td>2014</td>
+      <td>491</td>
+      <td>396900</td>
+      <td>5097</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[348]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Delete rows from the annual table that have missing county data</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="p">(</span><span class="n">annual</span><span class="o">.</span><span class="n">BUYER_COUNTY</span><span class="o">==</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+<span class="n">annual</span> <span class="o">=</span> <span class="n">annual</span><span class="p">[</span><span class="o">~</span><span class="n">condition</span><span class="p">]</span>
+
+<span class="c1"># Check that there are no missing values in the annual table</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of missing values in the buyer_country column:&quot;</span><span class="p">,</span> <span class="n">annual</span><span class="p">[(</span><span class="n">annual</span><span class="o">.</span><span class="n">BUYER_COUNTY</span><span class="o">==</span><span class="s2">&quot;NA&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The number of missing values in the buyer_country column: 0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[349]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grab three columns from the land table</span>
+<span class="n">land_area</span> <span class="o">=</span> <span class="n">land</span><span class="p">[[</span><span class="s2">&quot;Areaname&quot;</span><span class="p">,</span> <span class="s2">&quot;STCOU&quot;</span><span class="p">,</span> <span class="s2">&quot;LND110210D&quot;</span><span class="p">]]</span>
+<span class="n">land_area</span> <span class="o">=</span> <span class="n">land_area</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;STCOU&quot;</span><span class="p">:</span><span class="s2">&quot;countyfips&quot;</span><span class="p">})</span>
+<span class="n">land_area</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[349]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Areaname</th>
+      <th>countyfips</th>
+      <th>LND110210D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>UNITED STATES</td>
+      <td>00000</td>
+      <td>3531905.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALABAMA</td>
+      <td>01000</td>
+      <td>50645.33</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Autauga, AL</td>
+      <td>01001</td>
+      <td>594.44</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Baldwin, AL</td>
+      <td>01003</td>
+      <td>1589.78</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Barbour, AL</td>
+      <td>01005</td>
+      <td>884.88</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[350]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from population left join land_area using(countyfips)</span>
+<span class="n">county_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">population</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">land_area</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;countyfips&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+
+<span class="c1"># Check the sizes of the tables</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of the tables &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;land: &quot;</span><span class="p">,</span><span class="n">land</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;land_area: &quot;</span><span class="p">,</span><span class="n">land_area</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;county_info: &quot;</span><span class="p">,</span><span class="n">county_info</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;population: &quot;</span><span class="p">,</span><span class="n">population</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Size of the tables 
+--------------------
+land:  3198
+land_area:  3198
+county_info:  28265
+population:  28265
+</pre>
+</div>
 </div>
 
 </div>
@@ -14955,13 +15964,16 @@ if (outputEl) {{
 <h3 id="Question-4"><strong>Question 4</strong><a class="anchor-link" href="#Question-4">&#182;</a></h3><p>Create an interactive scatter plot of average number of opiod pills by year plot using plotly. See the example here. Don't do the intervals (little vertical lines), only the points. Add your plot to an html file with your repo for your Sanky diagram and host it publicly. Put a link to your hosted file in a markdown cell of your hw4.ipynb file. Note, an easy way to create a webpage with this graphic is to export an ipynb as an html file.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[389]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">annual</span> <span class="o">=</span> <span class="n">annual</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pills</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">((</span><span class="n">annual</span><span class="o">.</span><span class="n">DOSAGE_UNIT</span><span class="p">))</span><span class="o">/</span><span class="mi">1000000</span><span class="p">)</span>
+<span class="n">df_PY</span><span class="o">=</span><span class="n">annual</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">pills</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pills&#39;</span> <span class="p">:</span> <span class="s1">&#39;Average pills [Million]&#39;</span><span class="p">})</span>
+<span class="n">df_PY</span><span class="o">=</span><span class="n">df_PY</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">})</span>
+<span class="n">df_PY</span>
 </pre></div>
 
      </div>
@@ -14969,18 +15981,157 @@ if (outputEl) {{
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[389]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Average pills [Million]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2006</td>
+      <td>2.654669</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2007</td>
+      <td>2.995906</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2008</td>
+      <td>3.254271</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2009</td>
+      <td>3.526038</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010</td>
+      <td>3.783656</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2011</td>
+      <td>4.035583</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2012</td>
+      <td>3.993064</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2013</td>
+      <td>3.861752</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2014</td>
+      <td>3.768738</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[391]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig_4</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_PY</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Average pills [Million]&#39;</span><span class="p">)</span> <span class="c1">#,x=&quot;Year&quot;, y=&quot;Average number of opiod pills&quot;</span>
+<span class="n">fig_4</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<div>                            <div id="ea709dba-91d1-4589-857a-4d0ba6669a06" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ea709dba-91d1-4589-857a-4d0ba6669a06")) {                    Plotly.newPlot(                        "ea709dba-91d1-4589-857a-4d0ba6669a06",                        [{"hovertemplate":"Year=%{x}<br>Average pills [Million]=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":["2006","2007","2008","2009","2010","2011","2012","2013","2014"],"xaxis":"x","y":[2.6546691041116888,2.9959057758676613,3.254270674813071,3.5260380298391016,3.7836557365586323,4.035582966729157,3.9930638952396325,3.8617517808752115,3.76873803922203],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Year"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Average pills [Million]"}},"legend":{"tracegroupgap":0},"margin":{"t":60}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('ea709dba-91d1-4589-857a-4d0ba6669a06');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
